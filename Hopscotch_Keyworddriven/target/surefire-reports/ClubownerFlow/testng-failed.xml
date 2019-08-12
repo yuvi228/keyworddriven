@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [ClubownerFlow]">
+  <test thread-count="5" verbose="0" name="ClubownerFlow test(failed)">
+    <classes>
+      <class name="clubowner.Clubownerflow">
+        <methods>
+          <include name="clubSignupTest"/>
+        </methods>
+      </class> <!-- clubowner.Clubownerflow -->
+    </classes>
+  </test> <!-- ClubownerFlow test(failed) -->
+</suite> <!-- Failed suite [ClubownerFlow] -->
