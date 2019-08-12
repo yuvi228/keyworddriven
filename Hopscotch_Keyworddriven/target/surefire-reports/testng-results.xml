@@ -2,22 +2,22 @@
 <testng-results skipped="0" failed="1" ignored="4" total="7" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="ClubownerFlow" duration-ms="89233" started-at="2019-08-12T13:16:15Z" finished-at="2019-08-12T13:17:44Z">
+  <suite name="ClubownerFlow" duration-ms="87259" started-at="2019-08-12T14:05:20Z" finished-at="2019-08-12T14:06:47Z">
     <groups>
     </groups>
-    <test name="ClubownerFlow test" duration-ms="89233" started-at="2019-08-12T13:16:15Z" finished-at="2019-08-12T13:17:44Z">
+    <test name="ClubownerFlow test" duration-ms="87259" started-at="2019-08-12T14:05:20Z" finished-at="2019-08-12T14:06:47Z">
       <class name="com.Baseclass">
-        <test-method status="PASS" signature="applaunch()[pri:0, instance:com.Baseclass@531be3c5]" name="applaunch" duration-ms="12415" started-at="2019-08-12T13:16:15Z" finished-at="2019-08-12T13:16:27Z">
+        <test-method status="PASS" signature="applaunch()[pri:0, instance:com.Baseclass@54a097cc]" name="applaunch" duration-ms="11636" started-at="2019-08-12T14:05:20Z" finished-at="2019-08-12T14:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applaunch -->
       </class> <!-- com.Baseclass -->
       <class name="clubowner.Clubownerflow">
-        <test-method status="PASS" signature="splashTest()[pri:1, instance:clubowner.Clubownerflow@52af6cff]" name="splashTest" duration-ms="6605" started-at="2019-08-12T13:16:27Z" finished-at="2019-08-12T13:16:34Z">
+        <test-method status="PASS" signature="splashTest()[pri:1, instance:clubowner.Clubownerflow@36f6e879]" name="splashTest" duration-ms="6464" started-at="2019-08-12T14:05:31Z" finished-at="2019-08-12T14:05:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- splashTest -->
-        <test-method status="FAIL" signature="clubSignupTest()[pri:2, instance:clubowner.Clubownerflow@52af6cff]" name="clubSignupTest" duration-ms="70188" started-at="2019-08-12T13:16:34Z" finished-at="2019-08-12T13:17:44Z">
+        <test-method status="FAIL" signature="clubSignupTest()[pri:2, instance:clubowner.Clubownerflow@36f6e879]" name="clubSignupTest" duration-ms="69131" started-at="2019-08-12T14:05:38Z" finished-at="2019-08-12T14:06:47Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters.
@@ -26,7 +26,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'YuvrajR.local', ip: 'fe80:0:0:0:c26:922e:b828:8e85%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_192'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/yuvraj.rajput/Deskto..., automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 6s Plus (12.2), javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 12.3.1, takesScreenshot: true, udid: F0D1378E-5C99-494E-9C5D-4C7..., webStorageEnabled: false}
-Session ID: 208dc548-ec09-4485-a00f-f5688ed10ed6
+Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
 *** Element info: {Using=name, value=COME BACK LATER}]]>
             </message>
             <full-stacktrace>
@@ -36,7 +36,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'YuvrajR.local', ip: 'fe80:0:0:0:c26:922e:b828:8e85%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_192'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/yuvraj.rajput/Deskto..., automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 6s Plus (12.2), javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 12.3.1, takesScreenshot: true, udid: F0D1378E-5C99-494E-9C5D-4C7..., webStorageEnabled: false}
-Session ID: 208dc548-ec09-4485-a00f-f5688ed10ed6
+Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
 *** Element info: {Using=name, value=COME BACK LATER}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)

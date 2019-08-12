@@ -30,15 +30,15 @@ public class Baseclass {
 
 	public static Workbook workbook;
 	public static Sheet sheet;
-	public final String sheet_path = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch_Keyworddriven/src/test/resources/keyworddriven.xls";
+	public final String sheet_path = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/test/resources/keyworddriven.xls";
 	public MobileElement element;
 
 	public static IOSDriver<MobileElement> driver;
 	public static WebDriver webdriver;
-	String appPath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch_Keyworddriven/src/main/resources/";
+	String appPath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/main/resources/";
 
-	String propfilepath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch_Keyworddriven/src/main/resources/hopscotch.properties";
-	String driverpath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/keyworddriven/src/main/resources/chromedriver";
+	String propfilepath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/main/resources/hopscotch.properties";
+	String driverpath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/main/resources/chromedriver";
 
 	@Test
 	public void applaunch() throws Exception {
