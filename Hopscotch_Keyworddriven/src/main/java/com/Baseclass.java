@@ -2,9 +2,6 @@ package com;
 
 import java.io.File;
 
-
-
-
 import java.io.FileInputStream;
 
 import java.net.URL;
@@ -30,30 +27,42 @@ public class Baseclass {
 
 	public static Workbook workbook;
 	public static Sheet sheet;
-	public final String sheet_path = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/test/resources/keyworddriven.xls";
 	public MobileElement element;
 
 	public static IOSDriver<MobileElement> driver;
 	public static WebDriver webdriver;
-	String appPath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/main/resources/";
+	public static File propfile;
+	public static FileInputStream fileInput;
+	public static Properties prop;
 
 	String propfilepath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/main/resources/hopscotch.properties";
-	String driverpath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/main/resources/chromedriver";
 
 	@Test
 	public void applaunch() throws Exception {
+		propfile = new File(propfilepath);
+
+		fileInput = new FileInputStream(propfile);
+
+		prop = new Properties();
+		// load properties file
+		prop.load(fileInput);
+
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability("app", appPath + "Hopscotch.app");
-		desiredCapabilities.setCapability("deviceName", "iPhone 6s Plus (12.2)");
-//		desiredCapabilities.setCapability("deviceName", "iPhone ios 12.3.1");
-		desiredCapabilities.setCapability("udid", "F0D1378E-5C99-494E-9C5D-4C7BC5661276");
-
-//		desiredCapabilities.setCapability("udid", "bf692f81d806756bd2232271f80f15fd20c2c2a1");
-
+		desiredCapabilities.setCapability("app", prop.getProperty("appPath") + "Hopscotch.app");
 		desiredCapabilities.setCapability("automationName", "XCUITest");
+
+		if (prop.getProperty("runnable_device").equalsIgnoreCase("simulator")) {
+			desiredCapabilities.setCapability("deviceName", "iPhone 6s Plus (12.2)");
+			desiredCapabilities.setCapability("udid", "F0D1378E-5C99-494E-9C5D-4C7BC5661276");
+			desiredCapabilities.setCapability("platformVersion", "12.3.1");
+
+		} else {
+			desiredCapabilities.setCapability("deviceName", "iPhone ios 12.3.1");
+			desiredCapabilities.setCapability("udid", "bf692f81d806756bd2232271f80f15fd20c2c2a1");
+			desiredCapabilities.setCapability("platformVersion", "12.2");
+		}
 		desiredCapabilities.setCapability("platformName", "iOS");
-//		desiredCapabilities.setCapability("platformVersion", "12.2");
-		desiredCapabilities.setCapability("platformVersion", "12.3.1");
+
 		driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		System.out.println("Application Launched");
@@ -63,34 +72,31 @@ public class Baseclass {
 	public void startExecution(String sheetname) throws Exception {
 
 		// property file code
-		File propfile = new File(propfilepath);
+		propfile = new File(propfilepath);
 
-		FileInputStream fileInput = new FileInputStream(propfile);
+		fileInput = new FileInputStream(propfile);
 
-		Properties prop = new Properties();
+		prop = new Properties();
 		// load properties file
 		prop.load(fileInput);
 
-		Util.printMessage(prop.getProperty("adminurl"));
-
 		// excel code
 		FileInputStream file = null;
-		file = new FileInputStream(sheet_path);
+		file = new FileInputStream(prop.getProperty("sheet_path"));
 
 		workbook = WorkbookFactory.create(file);
 		sheet = workbook.getSheet(sheetname);
 
 		int k = 0;
 		for (int i = 0; i < sheet.getLastRowNum(); i++) {
-			System.out.println("Total row : " + sheet.getLastRowNum());
+
 			String locatorType = sheet.getRow(i + 1).getCell(k + 1).toString().trim();
-			System.out.println(locatorType);
+
 			String locatorValue = sheet.getRow(i + 1).getCell(k + 2).toString().trim();
-			System.out.println(locatorValue);
+
 			String action = sheet.getRow(i + 1).getCell(k + 3).toString().trim();
-			System.out.println(action);
+
 			String value = sheet.getRow(i + 1).getCell(k + 4).toString().trim();
-			System.out.println(value);
 
 			switch (locatorType) {
 
@@ -154,14 +160,14 @@ public class Baseclass {
 
 			case "browser":
 				if (value.equalsIgnoreCase("chrome")) {
-					System.setProperty("webdriver.chrome.driver", driverpath);
+					System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath"));
 					webdriver = new ChromeDriver();
 					webdriver.get(prop.getProperty("adminurl"));
 					webdriver.manage().window().maximize();
 				}
 
 				break;
-				
+
 			case "approveclub":
 				Loginpage login = new Loginpage();
 				login.adminLogin(locatorValue);

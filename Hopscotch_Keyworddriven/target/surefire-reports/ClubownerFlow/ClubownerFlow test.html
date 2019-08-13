@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 12 19:35:20 IST 2019</td>
+<td>Started on:</td><td>Tue Aug 13 15:39:20 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>87 seconds (87259 ms)</td>
+<tr><td>Total time:</td><td>68 seconds (68185 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,14 +76,12 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='clubowner.Clubownerflow.clubSignupTest()'><b>clubSignupTest</b><br>Test class: clubowner.Clubownerflow</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error Domain=com.facebook.WebDriverAgent Code=1 &quot;Keyboard is not present&quot; UserInfo={NSLocalizedDescription=Keyboard is not present}
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;YuvrajR.local&apos;, ip: &apos;fe80:0:0:0:c26:922e:b828:8e85%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_192&apos;
+System info: host: &apos;YuvrajR.local&apos;, ip: &apos;fe80:0:0:0:14ad:8345:efe1:56be%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_192&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/yuvraj.rajput/Deskto..., automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 6s Plus (12.2), javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 12.3.1, takesScreenshot: true, udid: F0D1378E-5C99-494E-9C5D-4C7..., webStorageEnabled: false}
-Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
-*** Element info: {Using=name, value=COME BACK LATER}
+Session ID: 56ede632-4231-46fc-a584-36cfb624668e
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -97,20 +95,12 @@ Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:118)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.ios.IOSDriver.findElementByName(IOSDriver.java:1)
-	at org.openqa.selenium.By$ByName.findElement(By.java:284)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-	at com.Baseclass.startExecution(Baseclass.java:120)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.ios.IOSElement.execute(IOSElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at com.Baseclass.startExecution(Baseclass.java:113)
 	at clubowner.Clubownerflow.clubSignupTest(Clubownerflow.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -141,15 +131,13 @@ Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1280124872", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1280124872'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+</pre></div><a href='#' onClick='toggleBox("stack-trace431570856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace431570856'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error Domain=com.facebook.WebDriverAgent Code=1 &quot;Keyboard is not present&quot; UserInfo={NSLocalizedDescription=Keyboard is not present}
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;YuvrajR.local&apos;, ip: &apos;fe80:0:0:0:c26:922e:b828:8e85%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_192&apos;
+System info: host: &apos;YuvrajR.local&apos;, ip: &apos;fe80:0:0:0:14ad:8345:efe1:56be%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_192&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/yuvraj.rajput/Deskto..., automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 6s Plus (12.2), javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 12.3.1, takesScreenshot: true, udid: F0D1378E-5C99-494E-9C5D-4C7..., webStorageEnabled: false}
-Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
-*** Element info: {Using=name, value=COME BACK LATER}
+Session ID: 56ede632-4231-46fc-a584-36cfb624668e
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -163,20 +151,12 @@ Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:118)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.ios.IOSDriver.findElementByName(IOSDriver.java:1)
-	at org.openqa.selenium.By$ByName.findElement(By.java:284)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-	at com.Baseclass.startExecution(Baseclass.java:120)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.ios.IOSElement.execute(IOSElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at com.Baseclass.startExecution(Baseclass.java:113)
 	at clubowner.Clubownerflow.clubSignupTest(Clubownerflow.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -208,8 +188,8 @@ Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
 </pre></div></td>
-<td>69</td>
-<td>clubowner.Clubownerflow@36f6e879</td></tr>
+<td>18</td>
+<td>clubowner.Clubownerflow@7225790e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -221,13 +201,13 @@ Session ID: 72176785-9e6d-4ee9-8022-a0e53f59edf6
 <tr>
 <td title='com.Baseclass.applaunch()'><b>applaunch</b><br>Test class: com.Baseclass</td>
 <td></td>
-<td>11</td>
-<td>com.Baseclass@54a097cc</td></tr>
+<td>43</td>
+<td>com.Baseclass@35fb3008</td></tr>
 <tr>
 <td title='clubowner.Clubownerflow.splashTest()'><b>splashTest</b><br>Test class: clubowner.Clubownerflow</td>
 <td></td>
 <td>6</td>
-<td>clubowner.Clubownerflow@36f6e879</td></tr>
+<td>clubowner.Clubownerflow@7225790e</td></tr>
 </table><p>
 </body>
 </html>
