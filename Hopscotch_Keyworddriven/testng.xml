@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="ClubownerFlow">
-	<test thread-count="5" verbose="2" name="ClubownerFlow test">
+<suite name="Hopscotch Application Test Automation">
+
+	<listeners>
+		<listener
+			class-name="com.report.ExtentReporterNG" />
+	</listeners>
+
+	<test name="ClubownerFlow test">
 		<classes>
-			<class name="com.Baseclass">
-				<methods>
-					<include name="applaunch"></include>
-				</methods>
-
-			</class>
-
-
-<!-- 			<class name="splash.Splash"> -->
-<!-- 				<methods> -->
-<!-- 					<include name="splashProcessTest"></include> -->
-<!-- 				</methods> -->
-
-
-<!-- 			</class> -->
 
 
 			<class name="clubowner.Clubownerflow">
-				<methods>
-				    
-				    <include name="splashTest"></include>
-					<include name="clubSignupTest"></include>
-				</methods>
+
 
 
 			</class>

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [ClubownerFlow]">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Hopscotch Application Test Automation]">
+  <listeners>
+    <listener class-name="com.report.ExtentReporterNG"/>
+  </listeners>
   <test thread-count="5" verbose="0" name="ClubownerFlow test(failed)">
     <classes>
       <class name="clubowner.Clubownerflow">
         <methods>
+          <include name="createEventTest"/>
+          <include name="emailReport"/>
           <include name="clubSignupTest"/>
+          <include name="setUp"/>
+          <include name="createPasscodeTest"/>
+          <include name="clubLoginTest"/>
+          <include name="clubApproveTest"/>
         </methods>
       </class> <!-- clubowner.Clubownerflow -->
     </classes>
   </test> <!-- ClubownerFlow test(failed) -->
-</suite> <!-- Failed suite [ClubownerFlow] -->
+</suite> <!-- Failed suite [Hopscotch Application Test Automation] -->

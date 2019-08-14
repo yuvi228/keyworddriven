@@ -2,12 +2,13 @@ package com;
 
 import java.io.File;
 
+
 import java.io.FileInputStream;
 
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import org.testng.annotations.Test;
+
 
 import adminpanel.Loginpage;
 
@@ -37,7 +38,7 @@ public class Baseclass {
 
 	String propfilepath = "/Users/yuvraj.rajput/Desktop/Yuvraj/Simform work/Automation/Learning/Hopscotch/Hopscotch_Keyworddriven/src/main/resources/hopscotch.properties";
 
-	@Test
+	
 	public void applaunch() throws Exception {
 		propfile = new File(propfilepath);
 
